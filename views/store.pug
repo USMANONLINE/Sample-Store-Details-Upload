@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Store
+        link(href="dist/css/bootstrap.min.css", rel="stylesheet")
+    body
+        .container
+            .row
+                each product,key in products
+                    .col-md-4
+                        div(class="card mt-2")
+                            img(src=product.productImg1, alt="Image not found", class="card-img-top", height="200")
+                            .card-body
+                                h5.card-title= product.productName
+                                p.card-text= product.productDetails
+                                a(href="/product/" +product.id, class="btn btn-primary") View Details

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(href="dist/css/bootstrap.min.css", rel="stylesheet")
+    body
+        .container
+            .row
+                div(class="col-md-6 col-sm-12 mt-3")
+                    .card
+                        .card-header
+                            div Add Product
+                        .card-body
+                            form(action="/addproduct", method="post", enctype="multipart/form-data")
+                                .form-group
+                                    label(for="productName") Product Name
+                                    input(type="text", name="name", class="form-control")
+                                .form-group
+                                    label(for="productPrice") Product Price
+                                    input(type="number", name="price", class="form-control")
+                                .form-group
+                                    label(for="productAvailableQuantity") Product Available Quantity
+                                    input(type="number", name="quantity", class="form-control")
+                                .form-group
+                                    label(for="productColor") Product Color
+                                    input(type="text", name="color", class="form-control")
+                                .form-group
+                                    label(for="productDetails") Product Details
+                                    textarea(name="details", cols="30", rows="10", class="form-control")
+                                .form-group
+                                    label(for="productName") Product Image
+                                    input(type="file", name="image", class="form-control", multiple="multiple")
+                                .form-group
+                                    button(type="submit", class="btn btn-primary btn-lg") Save
+                div(class="col-md-6 col-sm-12")
+        script(src="dist/js/bootstrap.min.js")

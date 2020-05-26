@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Product
+        link(rel="stylesheet", href="/dist/css/bootstrap.min.css")
+    body
+        .container
+            .row
+                .col-md-4
+                    div(class="card mt-5")
+                        img(src='/'+product.productImg1, alt="Image not found", class="card-img-top", height="200")
+                        .card-body
+                            h5.card-title= product.productName
+                            p.card-text= 'Product Price: N' + product.productPrice
+                            p.card-text= 'Product Color: ' +product.productColor
+                            p.card-text= 'Product Quantity Availabe: ' +product.productQuantityAvailable
+                            p.card-text= 'Product Details: ' +product.productDetails
+                .col-md-4
+                    div(class="card mt-5")
+                        img(src='/'+product.productImg2, alt="Image not found", class="card-img-top", height="200")
+                .col-md-4
+                    div(class="card mt-5")
+                        img(src='/'+product.productImg3, alt="Image not found", class="card-img-top", height="200")
+
+        
+        
